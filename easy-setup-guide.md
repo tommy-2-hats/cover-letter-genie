@@ -12,11 +12,13 @@ Imagine you have a team of super smart helpers:
 
 ## 📝 Step 1: Get Your Magic Files Ready
 
-First, we need to grab our "magic spells" (the JSON files). You have these files:
+First, we need to grab our "magic spells" (the JSON files). I made simple versions that work better:
 
-1. `job-pipeline-config.json` - The main boss who controls everyone
-2. `fact-checker-config.json` - The truth detective  
-3. `ai-detector-config.json` - The "sounds human" checker
+1. `simple-pipeline.json` - The main boss who controls everyone
+2. `simple-fact-checker.json` - The truth detective  
+3. `simple-human-checker.json` - The "sounds human" checker
+
+**If import doesn't work, try these simpler files first!**
 
 ## 🌐 Step 2: Open Your Open WebUI
 
@@ -45,22 +47,36 @@ Settings → Models → Import Model
 
 1. **Click the "+" button** or "Import Model" button
 2. **Choose "Upload File"** or "Import from JSON"
-3. **Select the file:** `job-pipeline-config.json`
+3. **Select the file:** `simple-pipeline.json`
 4. **Click "Upload" or "Import"**
 
 You should see a message like: ✅ "Model imported successfully!"
+
+**🚨 If nothing happens:**
+- Try refreshing the page and try again
+- Make sure the file is actually a .json file
+- Check that Open WebUI supports model imports
+- Try copying and pasting the JSON content directly instead
 
 ## 🔄 Step 5: Import the Other Helpers
 
 Repeat Step 4 for each file:
 
 **Import #2:**
-- File: `fact-checker-config.json`
+- File: `simple-fact-checker.json`
 - This is your truth detective! 🕵️‍♀️
 
 **Import #3:**
-- File: `ai-detector-config.json`  
+- File: `simple-human-checker.json`  
 - This is your "sounds human" checker! 🤖
+
+**🚨 Still having import problems? Try the manual method:**
+
+1. **Open the JSON file** in a text editor (like Notepad)
+2. **Copy ALL the text** (Ctrl+A, then Ctrl+C)
+3. **In Open WebUI, look for "Create Model"** instead of import
+4. **Paste the JSON** into a text box
+5. **Click Save or Create**
 
 ## 🎉 Step 6: Check Your New Agents
 
@@ -118,19 +134,41 @@ Agent: "🎯 AI DETECTION SCORE - Analyzing..."
 
 ## 🆘 If Something Goes Wrong
 
+### Problem: Nothing happens when I click Import
+**Try these fixes:**
+1. **Refresh the page** and try again
+2. **Check file format** - make sure it ends in .json
+3. **Try the manual copy-paste method** (see Step 5)
+4. **Check your Open WebUI version** - some older versions don't support imports
+5. **Try importing just one simple file first**
+
 ### Problem: "Model not found" error
 **Fix:** Make sure you imported the JSON file correctly
+
+### Problem: "Invalid JSON format" error
+**Fix:** 
+1. Open the JSON file and check for missing commas or brackets
+2. Try using the simple versions I created
+3. Copy-paste instead of file upload
 
 ### Problem: Agent gives weird responses
 **Fix:** 
 1. Check that you selected the right agent from the dropdown
 2. Try asking a simpler question first
+3. Make sure the import actually worked
 
 ### Problem: Can't find the import button
 **Fix:** 
 1. Look for ⚙️ Settings
-2. Then look for "Models" or "Workspace"
-3. Ask a grown-up to help find it
+2. Then look for "Models", "Workspace", or "Admin"
+3. Try "Modelfiles" or "Custom Models"
+4. Ask a grown-up to help find it
+
+### Problem: Import button is grayed out
+**Fix:**
+1. Check if you have admin permissions
+2. Make sure you're logged in properly
+3. Try logging out and back in
 
 ## 🎨 Making It Even Better
 
